@@ -8,6 +8,48 @@
         />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Weather App</title>
+        <style>
+            * {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                box-sizing: border-box;
+            }
+            #main {
+                text-align: center;
+                padding-top: 100px ;
+            }
+            input[type="text"]{
+                width: 30%;
+                padding: 10px;
+                border: 2px solid black;
+                margin-bottom: 5px;
+                margin-top: 20px;
+            }
+            input[type="submit"]{
+                width: 10%;
+                padding: 10px;
+                border: 2px solid black;
+                background: black;
+                color: white;
+                cursor: pointer;
+                font-size: medium;
+                text-transform: uppercase;
+            }
+        </style> 
     </head>
-    <body></body>
+    <body>
+        <div id="main">
+            <h1>Find the Weather</h1>
+            <form method="GET">
+                <label for="city"></label>
+                <input
+                    type="text"
+                    name="city"
+                    id="city"
+                    placeholder="Enter the city"
+                /><br><br>
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+    </body>
 </html>
