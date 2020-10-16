@@ -19,7 +19,6 @@ def get_html_content(city):
 
 
 def home(request):
-
     weather_data = None
     if 'city' in request.GET:
         city = request.GET.get('city')
@@ -30,6 +29,8 @@ def home(request):
             weather_data = dict()
             weather_data['region'] = soup.find(
                 'div', attrs={'id': 'wob_loc'}).text
+            weather_data['img'] = soup.find(
+                'img', attrs={'id': 'wob_tci'})['src']
             weather_data['daytime'] = soup.find(
                 'div', attrs={'id': 'wob_dts'}).text
             weather_data['status'] = soup.find(
